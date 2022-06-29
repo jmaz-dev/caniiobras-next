@@ -1,16 +1,232 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Global */
+
+html {
+  scroll-behavior: smooth;
+}
+h1 {
+  font-size: calc(1.425rem + 2.8vw);
+  font-weight: 300;
+  line-height: 1.2;
+  color: #4d4d4d;
+  text-align: center;
 }
 
-a {
-  color: inherit;
+@layer base {
+  body {
+    @apply bg-[#ecf0f3] text-[#1f2937] tracking-wide;
+  }
+
+  h1,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold tracking-widest;
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl sm:text-4xl;
+  }
+
+  li {
+    @apply cursor-pointer;
+  }
+}
+/* Swiper */
+.swiper {
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+/* Cards serviços */
+.cardImage {
+  border-radius: 20px;
+  background: #50a7ff;
+  position: relative;
+  width: 250px;
+  max-width: 300px;
+  height: 250px;
+  overflow: hidden;
+}
+.cardImage img {
+  opacity: 0.8;
+  position: relative;
+  vertical-align: top;
+  transition: 0.6s;
+  transition-property: opacity;
+}
+.cardImage:hover img {
+  opacity: 1;
+}
+
+.cardImage .Details {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+}
+.cardImage .Details h2 {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-top: 70px;
+  transition: 0.4s;
+  transition-property: transform;
+}
+.cardImage .Details h2 span {
+  font-weight: 900;
+}
+.cardImage:hover details h2 {
+  transform: translateY(-30px);
+}
+.cardImage .Details p {
+  margin: 30px 30px 0 30px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0;
+  transition: 0.6s;
+  transition-property: opacity, transform;
+}
+.cardImage:hover .Details h2 {
+  opacity: 1;
+  transform: translateY(-40px);
+}
+
+.More {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  bottom: -60px;
+  transition: 0.6s;
+  transition-property: bottom;
+}
+.cardImage:hover .More {
+  bottom: 0;
+}
+.More .Read-More {
+  color: #000;
   text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.More .Read-More span {
+  font-weight: 900;
 }
 
-* {
-  box-sizing: border-box;
+.More .Icon-Links i {
+  color: #000;
+  font-size: 20px;
+}
+
+.More .Icon-Links a:not(:last-child) i {
+  margin-right: 20px;
+}
+
+/* Contato */
+
+.form {
+  @apply grid items-center my-0 mx-6;
+}
+.form__content {
+  @apply grid gap-6;
+}
+.form__input,
+.form__submit {
+  @apply border-0 outline-none;
+}
+.form__box {
+  @apply w-[312px] h-[59px] relative;
+}
+.form__shadow {
+  @apply absolute w-full h-full bg-black;
+}
+
+.form__input {
+  @apply absolute border-solid border-2 bg-white  border-neutral-900 w-full h-full z-10 p-4 duration-300;
+}
+.form__input::placeholder {
+  @apply transition-opacity ease-in duration-500;
+}
+
+.form__button {
+  @apply flex justify-self-end bg-black font-semibold;
+}
+
+.form__submit {
+  @apply p-6 text-black bg-teal-300 cursor-pointer duration-300;
+}
+
+.form__submit:hover {
+  @apply translate-y-[-6px] translate-x-[-6px];
+}
+
+.form__input:focus::placeholder {
+  @apply opacity-0 duration-300;
+}
+
+.form__input:focus,
+.form__input:not(:placeholder-shown).form__input:not(:focus) {
+  @apply translate-y-[-8px] translate-x-[-8px] py-7 px-4;
+}
+
+/* Mapa */
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  display: flex;
+  width: 100%;
+  height: max-content;
+}
+.mapouter {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 5px 10px 10px rgb(121, 121, 121);
+}
+.map {
+  width: 350px;
+  height: 300px;
+}
+
+.text ul {
+  margin-top: 1.5em;
+  list-style: none;
+}
+.text li {
+  padding: 0.5em;
+  border-bottom: 1px solid #aaa;
 }
