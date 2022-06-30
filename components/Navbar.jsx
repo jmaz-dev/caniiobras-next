@@ -1,9 +1,10 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
-import * as Ai from "react-icons/ai";
-import * as Fa from "react-icons/fa";
-import * as Bs from "react-icons/bs";
+import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
+import { FaInstagram, FaFacebook } from "react-icons/fa";
+import { BsFillPersonLinesFill } from "react-icons/bs";
+import Logo from "../public/assets/imglg.png";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -14,15 +15,10 @@ const Navbar = () => {
   return (
     <div className={"fixed w-full h-20 z-[100] bg-[#ecf0f3]"}>
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <Link href="/">
-          <Image
-            src="/../assets/logo.png"
-            alt="/"
-            width="150"
-            height="150"
-          />
-        </Link>
-        <ul className="hidden md:flex text-[#1f2937]">
+        <a href="/">
+          <Image src={Logo} width="150" height="150" alt="logo" />
+        </a>
+        <ul className="hidden md:flex text-[#1f2937] ">
           <Link href="/">
             <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
           </Link>{" "}
@@ -38,7 +34,7 @@ const Navbar = () => {
         </ul>
         {/*Menu hamburguer */}
         <div onClick={handleNav} className="md:hidden text-[#1f2937]">
-          <Ai.AiOutlineMenu size={25} />
+          <AiOutlineMenu size={25} />
         </div>
       </div>
       <div
@@ -55,17 +51,12 @@ const Navbar = () => {
         >
           <div>
             <div className="flex w-full justify-between items-center">
-              <Image
-                src="/../assets/logo.png"
-                alt="/"
-                width="100"
-                height="100"
-              />
+              <Image src={Logo} alt="/" width="100" height="100" />
               <div
                 onClick={handleNav}
                 className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
               >
-                <Ai.AiOutlineClose />
+                <AiOutlineClose />
               </div>
             </div>
             <div className="border-b border-gray-300 my-0">
@@ -98,24 +89,24 @@ const Navbar = () => {
               </Link>
             </ul>
             <div className="flex items-center justify-between my-4 w-full sm:w-[80%] py-8">
-              <a href="https://www.linkedin.com/in/jmazeredo/" target="_blank">
-                <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <Fa.FaLinkedinIn className="text-[#022043]" />
+              <a href="#" target="_blank">
+                <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-105 duration-300">
+                  <FaInstagram className="text-[#022043]" />
                 </div>
               </a>
-              <a href="https://github.com/JMAzer-dev" target="_blank">
-                <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <Fa.FaGithub className="text-[#022043]" />
+              <a href="#" target="_blank">
+                <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-105 duration-300">
+                  <FaFacebook className="text-[#022043]" />
                 </div>
               </a>
               <a href="mailto:jmaz.dev@gmail.com">
-                <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <Ai.AiOutlineMail className="text-[#022043]" />
+                <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-105 duration-300">
+                  <AiOutlineMail className="text-[#022043]" />
                 </div>
               </a>
               <a href="tel:+55 21 96807 2492">
-                <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
-                  <Bs.BsFillPersonLinesFill className="text-[#022043]" />
+                <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-105 duration-300">
+                  <BsFillPersonLinesFill className="text-[#022043]" />
                 </div>
               </a>
             </div>

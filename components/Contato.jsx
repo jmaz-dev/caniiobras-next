@@ -38,9 +38,9 @@ const Contato = () => {
 
   return (
     <>
-      <div id="contato" className="w-full lg:h-screen p-2">
+      <div id="contato" className="w-full h-full p-2 ">
         <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full items-center">
-          <div className="pb-16 tracking-widest">
+          <div className="p-16  tracking-widest">
             <h1>Contato</h1>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 items-center">
