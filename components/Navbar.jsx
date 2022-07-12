@@ -15,9 +15,9 @@ const Navbar = () => {
   return (
     <div className={"fixed w-full h-20 z-[100] bg-[#ecf0f3]"}>
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <a href="/">
+        <Link href="/#home">
           <Image src={Logo} alt="logo" />
-        </a>
+        </Link>
         <ul className="hidden md:flex text-[#1f2937] ">
           <Link href="/">
             <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
@@ -89,26 +89,26 @@ const Navbar = () => {
               </Link>
             </ul>
             <div className="flex items-center justify-between my-4 w-full sm:w-[80%] py-8">
-              <a href="#" target="_blank" rel="noreferrer">
+              <Link href="#" target="_blank" rel="noreferrer">
                 <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-105 duration-300">
                   <FaInstagram className="text-[#022043]" />
                 </div>
-              </a>
-              <a href="#" target="_blank" rel="noreferrer">
+              </Link>
+              <Link href="#" target="_blank" rel="noreferrer">
                 <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-105 duration-300">
                   <FaFacebook className="text-[#022043]" />
                 </div>
-              </a>
-              <a href="mailto:jmaz.dev@gmail.com">
+              </Link>
+              <Link href="mailto:jmaz.dev@gmail.com">
                 <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-105 duration-300">
                   <AiOutlineMail className="text-[#022043]" />
                 </div>
-              </a>
-              <a href="tel:+55 21 96807 2492">
+              </Link>
+              <Link href="tel:+55 21 96807 2492">
                 <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-105 duration-300">
                   <BsFillPersonLinesFill className="text-[#022043]" />
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
