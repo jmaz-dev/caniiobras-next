@@ -13,14 +13,8 @@ import Cards from "./Cards";
 
 const Servicos = () => {
   return (
-    <div id="servicos" className="w-full lg:h-screen p-2 ">
+    <div id="servicos" className="w-full h-auto p-2 ">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full items-center">
-        <section>
-          <div className="p-16 tracking-widest">
-            <h1 className="">Nossos Serviços</h1>
-            
-          </div>
-        </section>
 
         <section className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 justify-center items-center">
           <Cards

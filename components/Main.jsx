@@ -17,7 +17,7 @@ import Image from "next/image";
 
 const Home = () => {
   return (
-    <div id="home" className="w-full lg:h-screen p-2">
+    <div id="home" className="relative w-full h-auto p-2">
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full pt-20">
         <section>
           <Swiper
