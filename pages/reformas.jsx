@@ -25,7 +25,7 @@ const reformas = () => {
           <div className="image p-4">
             <Image
               src={RefImg}
-              alt=""
+              alt="Reformas"
               className="p-2 hover:scale-105 ease-in duration-300 shadow-xl shadow-gray-800 drop-shadow-sm w-[90%]"
             />
             <div className="text-xl w-full text-gray-600 leading-8 pt-4">

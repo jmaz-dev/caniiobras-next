@@ -33,7 +33,7 @@ const projetos = () => {
           <div className="image">
             <Image
               src={ProjImg}
-              alt=""
+              alt="Projetos"
               className="p-2 hover:scale-105 ease-in duration-300 shadow-xl shadow-gray-800 drop-shadow-sm w-[90%]"
             />
             <div className="text-xl w-full text-gray-600 leading-8 pt-4">

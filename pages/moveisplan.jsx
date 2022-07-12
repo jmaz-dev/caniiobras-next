@@ -69,13 +69,13 @@ const moveisplan = () => {
                 className="mySwiper2 hover:scale-105 ease-in duration-300 shadow-gray-700 shadow-xl drop-shadow-sm rounded-lg"
               >
                 <SwiperSlide>
-                  <Image src={Plan01} />
+                  <Image src={Plan01} alt="Moveis Planejados"/>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <Image src={Plan02} />
+                  <Image src={Plan02} alt="Moveis Planejados"/>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <Image src={Plan03} />
+                  <Image src={Plan03} alt="Moveis Planejados"/>
                 </SwiperSlide>
               </Swiper>
             </section>

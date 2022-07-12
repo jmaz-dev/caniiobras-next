@@ -33,6 +33,7 @@ const construcao = () => {
               <Image
                 className="p-2 hover:scale-105 ease-in duration-300 shadow-xl shadow-gray-800 drop-shadow-md"
                 src={ContImg}
+                alt="Contrução"
               />
             </div>
           </div>

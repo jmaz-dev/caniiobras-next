@@ -40,13 +40,13 @@ const Home = () => {
             className="mySwiper2"
           >
             <SwiperSlide>
-              <Image src={ImgWin} />
+              <Image src={ImgWin} alt="Projetos"/>
             </SwiperSlide>
             <SwiperSlide>
-              <Image src={ImgCoz} />
+              <Image src={ImgCoz} alt="Projetos"/>
             </SwiperSlide>
             <SwiperSlide>
-              <Image src={ImgBan} />
+              <Image src={ImgBan} alt="Projetos"/>
             </SwiperSlide>
           </Swiper>
         </section>

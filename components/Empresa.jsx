@@ -1,4 +1,5 @@
-
+import Image from "next/image";
+import EmpImg from "../public/assets/empresaimg.png"
 
 const Empresa = () => {
   return (
@@ -25,9 +26,10 @@ const Empresa = () => {
             </p>
           </div>
           <div className="p-8">
-            <img
+            <Image
               className="p-2 hover:scale-105 ease-in duration-300 shadow-xl shadow-gray-800 drop-shadow-md"
-              src="/../assets/empresaimg.png"
+              src={EmpImg}
+              alt="Empresa"
             />
           </div>
         </div>
