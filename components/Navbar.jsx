@@ -89,12 +89,12 @@ const Navbar = () => {
               </Link>
             </ul>
             <div className="flex items-center justify-between my-4 w-full sm:w-[80%] py-8">
-              <a href="#" target="_blank">
+              <a href="#" target="_blank" rel="noreferrer">
                 <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-105 duration-300">
                   <FaInstagram className="text-[#022043]" />
                 </div>
               </a>
-              <a href="#" target="_blank">
+              <a href="#" target="_blank" rel="noreferrer">
                 <div className="rounded-full shadow-lg shadow-grat-400 p-3 cursor-pointer hover:scale-105 duration-300">
                   <FaFacebook className="text-[#022043]" />
                 </div>

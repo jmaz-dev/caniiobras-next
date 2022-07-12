@@ -12,6 +12,7 @@ const Footer = () => {
               <a
                 href="https://www.linkedin.com/in/jmazeredo/"
                 target="_blank"
+                rel="noreferrer"
                 className="font-semibold pl-1"
               >
                 JMAzer
