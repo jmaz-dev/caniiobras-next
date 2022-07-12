@@ -27,7 +27,7 @@ const Empresa = () => {
           </div>
           <div className="p-8">
             <Image
-              className="p-2 hover:scale-105 ease-in duration-300 shadow-xl shadow-gray-800 drop-shadow-md"
+              className="p-2 hover:scale-105 ease-in duration-300 shadow-xl shadow-gray-800 drop-shadow-md rounded-xl"
               src={EmpImg}
               alt="Empresa"
             />
