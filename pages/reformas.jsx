@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import RefImg from "../public/assets/reformimg2.png";
 
 const reformas = () => {
   return (
@@ -19,24 +21,23 @@ const reformas = () => {
               <li>Serviços De Gesso E Drywall</li>
               <li>Raspagem E Recuperação De Assoalhos E Tacos</li>
             </ul>
-           
           </div>
           <div className="image p-4">
-            <img
-              src="/../assets/reformimg2.png"
+            <Image
+              src={RefImg}
               alt=""
               className="p-2 hover:scale-105 ease-in duration-300 shadow-xl shadow-gray-800 drop-shadow-sm w-[90%]"
             />
             <div className="text-xl w-full text-gray-600 leading-8 pt-4">
-            <div>
-              Para mais informações e orçamentos:
-              <Link href="/#contato">
-                <span className="font-semibold cursor-pointer pb-4">
-                  {" "}
-                  Contate-nos
-                </span>
-              </Link>
-            </div>
+              <div>
+                Para mais informações e orçamentos:
+                <Link href="/#contato">
+                  <span className="font-semibold cursor-pointer pb-4">
+                    {" "}
+                    Contate-nos
+                  </span>
+                </Link>
+              </div>
             </div>
           </div>
         </div>

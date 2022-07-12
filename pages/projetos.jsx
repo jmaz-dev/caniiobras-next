@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+import ProjImg from "../public/assets/projetoimg.jpeg";
 
 const projetos = () => {
   return (
@@ -29,8 +31,8 @@ const projetos = () => {
             </ul>
           </div>
           <div className="image">
-            <img
-              src="/../assets/projetoimg.jpeg"
+            <Image
+              src={ProjImg}
               alt=""
               className="p-2 hover:scale-105 ease-in duration-300 shadow-xl shadow-gray-800 drop-shadow-sm w-[90%]"
             />

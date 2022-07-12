@@ -1,4 +1,6 @@
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
+import EletImg from "../public/assets/serveletrica.png";
 
 const eletrica = () => {
   return (
@@ -11,7 +13,11 @@ const eletrica = () => {
           <div className="grid md:grid-cols-2 grid-cols-1 justify-center items-center">
             <div className="text-xl w-full text-gray-600 leading-8 ">
               <p className="text-justify">
-              Desenvolvimento do projeto desde instalações elétricas até a implementação, documentação, identificação dos quadros e disjuntores através de nossos engenheiros e eletricistas seguindo sempre os padrões e normativas exigidas em uma prestação de serviços especializada.
+                Desenvolvimento do projeto desde instalações elétricas até a
+                implementação, documentação, identificação dos quadros e
+                disjuntores através de nossos engenheiros e eletricistas
+                seguindo sempre os padrões e normativas exigidas em uma
+                prestação de serviços especializada.
               </p>
               <div className="text-xl">
                 Para mais informações e orçamentos:
@@ -24,16 +30,16 @@ const eletrica = () => {
               </div>
             </div>
             <div className="p-8 self-center">
-              <img
+              <Image
                 className="p-2 hover:scale-105 ease-in duration-300 shadow-xl shadow-gray-800 drop-shadow-md"
-                src="/../assets/serveletrica.png"
+                src={EletImg}
               />
             </div>
           </div>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default eletrica
+export default eletrica;

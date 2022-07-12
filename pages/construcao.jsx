@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import ContImg from "../public/assets/casacontru.jpg"
 
 const construcao = () => {
   return (
@@ -28,9 +30,9 @@ const construcao = () => {
             </div>
             </div>
             <div className="p-8 self-center">
-              <img
+              <Image
                 className="p-2 hover:scale-105 ease-in duration-300 shadow-xl shadow-gray-800 drop-shadow-md"
-                src="/../assets/casacontru.jpg"
+                src={ContImg}
               />
             </div>
           </div>
