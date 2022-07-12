@@ -15,8 +15,8 @@ const Navbar = () => {
   return (
     <div className={"fixed w-full h-20 z-[100] bg-[#ecf0f3]"}>
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <Link href="/#home">
-          <Image src={Logo} alt="logo" />
+        <Link href="/#home" >
+          <Image src={Logo} alt="logo" width="130px" height="130px"/>
         </Link>
         <ul className="hidden md:flex text-[#1f2937] ">
           <Link href="/">
