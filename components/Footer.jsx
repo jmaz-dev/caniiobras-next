@@ -3,10 +3,12 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <div className=" bg-white py-3 text-gray-500 text-xl leading-8">
+      <div className=" bg-white py-3 text-gray-500 text-sm  md:text-xl leading-8">
         <div>
-          <div className="flex justify-between my-2 mx-8">
-            <p>&copy;CaniiObras - Todos os direitos reservados</p>
+          <div className="md:flex block md:flex-row md:justify-between my-2 mx-4 items-center">
+            <p>&copy; 2022 CaniiObras <span className="">Todos os direitos reservados</span>
+              
+            </p>
             <i>
               Design by:
               <a

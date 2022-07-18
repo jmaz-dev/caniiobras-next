@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { AiOutlineClose, AiOutlineMenu, AiOutlineMail } from "react-icons/ai";
 import { FaInstagram, FaFacebook } from "react-icons/fa";
@@ -12,11 +12,30 @@ const Navbar = () => {
     setNav(!nav);
   };
 
+  const [shadow, setShadow] = useState(false);
+
+  useEffect(() => {
+    const handleShaddow = () => {
+      if (window.scrollY >= 90) {
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    };
+    window.addEventListener("scroll", handleShaddow);
+  }, []);
+
   return (
     <div className={"fixed w-full h-20 z-[100] bg-[#ecf0f3]"}>
-      <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
-        <Link href="/#home" >
-          <Image src={Logo} alt="logo" width="130px" height="130px"/>
+      <div
+        className={
+          shadow
+            ? "flex justify-between items-center w-full h-full px-2 2xl:px-16 shadow-lg shadow-gray-400"
+            : "flex justify-between items-center w-full h-full px-2 2xl:px-16"
+        }
+      >
+        <Link href="/#home">
+          <Image src={Logo} alt="logo" width="130px" height="130px" />
         </Link>
         <ul className="hidden md:flex text-[#1f2937] ">
           <Link href="/">
