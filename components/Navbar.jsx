@@ -37,7 +37,7 @@ const Navbar = () => {
         <Link href="/#home">
           <Image src={Logo} alt="logo" width="130px" height="130px" />
         </Link>
-        <ul className="hidden md:flex text-[#1f2937] ">
+        <ul className="hidden lg:flex text-[#1f2937] ">
           <Link href="/">
             <li className="ml-10 text-sm uppercase hover:border-b">Home</li>
           </Link>{" "}
@@ -52,13 +52,13 @@ const Navbar = () => {
           </Link>{" "}
         </ul>
         {/*Menu hamburguer */}
-        <div onClick={handleNav} className="md:hidden text-[#1f2937]">
+        <div onClick={handleNav} className="lg:hidden text-[#1f2937]">
           <AiOutlineMenu size={25} />
         </div>
       </div>
       <div
         className={
-          nav ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""
+          nav ? "lg:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""
         }
       >
         <div
